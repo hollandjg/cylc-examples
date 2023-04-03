@@ -11,9 +11,9 @@
         P2 = """
             d => e
         """
-        1/P2 = """
+        1/P2 = """       # P2: repeats every other cycle. 1/ starts on cycle 1 (=> odd)
             d[-P1] => a
         """
-        2/P2 = """
+        2/P2 = """       #                                2/ starts on cycle 2 (=> even)
             e[-P1] => a
         """
