@@ -8,4 +8,5 @@
             buy_ingredients => make_dough
             pre_heat_oven & make_dough => bake_bread
             bake_bread => sell_bread & clean_oven
+            clean_oven[-P1] => pre_heat_oven
         """
