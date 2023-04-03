@@ -1,11 +1,11 @@
 [scheduler]
     allow implicit tasks = True
 [scheduling]
+    cycling mode = integer
+    initial cycle point = 1
     [[graph]]
-        R1 = """
-            a => b
-            c => b
-            b => d
-            b => f
-            d => e
+        P1 = """
+            buy_ingredients => make_dough
+            pre_heat_oven & make_dough => bake_bread
+            bake_bread => sell_bread & clean_oven
         """
