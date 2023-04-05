@@ -1,0 +1,11 @@
+[runtime]
+    [[hello_world_sh]]
+        script = echo 'Hello World!'; sleep 1
+
+[scheduling]
+    cycling mode = integer
+    initial cycle point = 1
+    [[graph]]
+        P1 = """
+            hello_world_sh[-P1] => hello_world_sh
+        """

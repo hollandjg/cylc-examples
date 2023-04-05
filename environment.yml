@@ -1,0 +1,12 @@
+name: base
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - mamba
+  - cylc-flow
+  - ca-certificates
+  - certifi
+  - openssl
+  - cylc-uiserver
