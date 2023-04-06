@@ -1,15 +1,15 @@
 [runtime]
     
     [[experimentalist]]
-        script = echo "conditions" >> conditions.txt
+        script = echo "conditions" >> "$CYLC_WORKFLOW_SHARE_DIR/conditions.txt"
         platform = oscar
 
     [[experiment_runner]]
-        script = echo "observations" >> observations.txt
+        script = echo "observations" >> "$CYLC_WORKFLOW_SHARE_DIR/observations.txt"
         platform = oscar
 
     [[theorist]]
-        script = echo "theory" >> theories.txt
+        script = echo "theory" >> "$CYLC_WORKFLOW_SHARE_DIR/theories.txt"
         platform = oscar
 
 [scheduling]
