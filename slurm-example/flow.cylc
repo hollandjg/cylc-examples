@@ -6,11 +6,14 @@
     [[wait]]
         script = sleep 2
 
+    [[wait_batch]]
+        script = sleep 1
+        platform = oscar
+
 [scheduling]
     cycling mode = integer
     initial cycle point = 1
     [[graph]]
         P1 = """
-            wait[-P1] => hello_world_sh => wait
-            
+            wait[-P1] => wait_batch => hello_world_sh => wait
         """
