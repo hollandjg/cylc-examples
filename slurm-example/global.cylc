@@ -1,7 +1,8 @@
 [platforms]
     [[oscar]]
-        # This computer with Slurm requires you to use a login node.
-        hosts = sshcampus.ccv.brown.edu
+        hosts = localhost
+        install target = localhost
         job runner = slurm
         retrieve job logs = True
-        communication method = ssh
+        cylc path = /users/jholla10/anaconda/cylc/bin/cylc
+

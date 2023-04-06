@@ -1,12 +1,16 @@
 [runtime]
     [[hello_world_sh]]
-        script = echo 'Hello World!'; sleep 10
+        script = hello_slurm.sh
         platform = oscar
+    
+    [[wait]]
+        script = sleep 2
 
 [scheduling]
     cycling mode = integer
     initial cycle point = 1
     [[graph]]
         P1 = """
-            hello_world_sh[-P1] => hello_world_sh
+            wait[-P1] => hello_world_sh => wait
+            
         """
