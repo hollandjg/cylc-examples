@@ -1,0 +1,7 @@
+[platforms]
+    [[oscar]]
+        # This computer with Slurm requires you to use a login node.
+        hosts = sshcampus.ccv.brown.edu
+        job runner = slurm
+        retrieve job logs = True
+        communication method = ssh
