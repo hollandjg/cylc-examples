@@ -1,13 +1,13 @@
 [runtime]
     [[hello_world_sh]]
-        script = hello_slurm.sh
+        script = hello_slurm.sh  # a shell script in bin/
         platform = oscar
     
     [[wait]]
         script = sleep 2
 
     [[wait_batch]]
-        script = sleep 1
+        script = sleep 1  # a shell command
         platform = oscar
 
 [scheduling]
