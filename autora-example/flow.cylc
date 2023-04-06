@@ -1,0 +1,21 @@
+[runtime]
+    
+    [[experimentalist]]
+        script = echo "conditions" >> conditions.txt
+        platform = oscar
+
+    [[experiment_runner]]
+        script = echo "observations" >> observations.txt
+        platform = oscar
+
+    [[theorist]]
+        script = echo "theory" >> theories.txt
+        platform = oscar
+
+[scheduling]
+    cycling mode = integer
+    initial cycle point = 1
+    [[graph]]
+        P1 = """
+            theorist[-P1] => experimentalist => experiment_runner => theorist
+        """
